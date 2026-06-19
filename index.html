@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labof Films</title>
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <!-- Fontes locais Ford Antenna -->
+</head>
+<body>
+
+  <!-- Fundo desfocado fixo — imagem do projeto ativo vaza por baixo do vidro -->
+  <div class="blur-bg" id="blurBg">
+    <div class="blur-bg-img visible" id="blurBgA"></div>
+    <div class="blur-bg-img" id="blurBgB"></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       INTRO — Logo screen (2s then fades)
+  ════════════════════════════════════════════════ -->
+  <div class="intro" id="intro">
+    <div class="intro-logo-wrap" id="introLogoWrap">
+      <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" class="intro-logo" id="introLogo" />
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAV — Fixed, appears after intro
+  ════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo" id="navLogo">
+      <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" />
+    </a>
+    <div class="nav-links">
+      <a href="#section-publicidade" class="nav-link">Publicidade</a>
+      <a href="#section-realtime" class="nav-link">Real Time</a>
+      <a href="#section-conteudo" class="nav-link">Conteúdo</a>
+      <a href="#section-institucional" class="nav-link">Institucional</a>
+    </div>
+    <button class="nav-sobre" id="navSobre">Sobre</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO — Full-screen slideshow
+  ════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Slides -->
+    <div class="hero-slides" id="heroSlides">
+
+      <div class="hero-slide active" data-id="havaianas" data-vimeo="549407968" data-title="Havaianas" data-sub="Cabeça, ombro, joelho e pé" data-tag="Publicidade">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/549407968?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="outback" data-vimeo="1202701373" data-title="Outback" data-sub="Com que roupa eu vou?" data-tag="Publicidade">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/1202701373?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="ford-mustang" data-vimeo="896895463" data-title="Ford Mustang Mach-E" data-sub="" data-tag="Publicidade">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/896895463?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="ford-wec" data-vimeo="1103595061" data-title="WEC" data-sub="Ford — Real Time" data-tag="Real Time">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/1103595061?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="avatim-snd" data-vimeo="1034055050" data-title="Avatim" data-sub="Sob Nova Direção" data-tag="Conteúdo">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/1034055050?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="ford-employees" data-vimeo="1056047226" data-title="Ford Employees" data-sub="" data-tag="Institucional">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/1056047226?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-id="centauro-pais" data-vimeo="1104136580" data-title="Centauro" data-sub="Dia dos Pais" data-tag="Institucional">
+        <div class="slide-bg">
+          <iframe src="https://player.vimeo.com/video/1104136580?background=1&autoplay=1&loop=1&muted=1&quality=auto&dnt=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero UI overlay -->
+    <div class="hero-ui">
+      <div class="hero-info">
+        <span class="hero-tag" id="heroTag">Publicidade</span>
+        <h2 class="hero-title" id="heroTitle">Havaianas</h2>
+        <p class="hero-sub" id="heroSub">Cabeça, ombro, joelho e pé</p>
+      </div>
+      <div class="hero-controls">
+        <div class="hero-dots" id="heroDots"></div>
+        <button class="hero-play-btn" id="heroPlayBtn">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5 3.5L14.5 9L5 14.5V3.5Z" fill="white"/>
+          </svg>
+          <span>Ver projeto</span>
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TICKER — clientes rolando
+  ════════════════════════════════════════════════ -->
+  <div class="clients-ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Outback</span><span class="ticker-sep">✦</span>
+      <span>Havaianas</span><span class="ticker-sep">✦</span>
+      <span>Ford</span><span class="ticker-sep">✦</span>
+      <span>Centauro</span><span class="ticker-sep">✦</span>
+      <span>WEC</span><span class="ticker-sep">✦</span>
+      <span>Dark Horse</span><span class="ticker-sep">✦</span>
+      <span>Avatim</span><span class="ticker-sep">✦</span>
+      <!-- duplicado para loop infinito suave -->
+      <span>Outback</span><span class="ticker-sep">✦</span>
+      <span>Havaianas</span><span class="ticker-sep">✦</span>
+      <span>Ford</span><span class="ticker-sep">✦</span>
+      <span>Centauro</span><span class="ticker-sep">✦</span>
+      <span>WEC</span><span class="ticker-sep">✦</span>
+      <span>Dark Horse</span><span class="ticker-sep">✦</span>
+      <span>Avatim</span><span class="ticker-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTIONS — by category
+  ════════════════════════════════════════════════ -->
+  <main class="main" id="main">
+
+    <!-- ── PUBLICIDADE ── -->
+    <section class="category-section" id="section-publicidade" data-cat="Publicidade">
+      <div class="section-label">
+        <span class="section-tag">01 — Publicidade</span>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project" data-id="havaianas" data-vimeo="549407968" data-title="Havaianas" data-sub="Cabeça, ombro, joelho e pé">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">HAVAIANAS</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">01</span>
+            <div class="project-text">
+              <strong>Havaianas</strong>
+              <em>Cabeça, ombro, joelho e pé</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="outback" data-vimeo="1202701373" data-title="Outback" data-sub="Com que roupa eu vou?">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">OUTBACK</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">02</span>
+            <div class="project-text">
+              <strong>Outback</strong>
+              <em>Com que roupa eu vou?</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--wide" data-id="ford-mustang" data-vimeo="896895463" data-title="Ford Mustang Mach-E" data-sub="">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD MUSTANG MACH-E</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">03</span>
+            <div class="project-text">
+              <strong>Ford Mustang Mach-E</strong>
+              <em></em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="centauro-natal" data-vimeo="1168498394" data-title="Centauro" data-sub="Natal com Felipão">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">CENTAURO</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">04</span>
+            <div class="project-text">
+              <strong>Centauro</strong>
+              <em>Natal com Felipão</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="avatim-ivete" data-vimeo="1202701374" data-title="Avatim — Ivete" data-sub="">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">AVATIM — IVETE</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">05</span>
+            <div class="project-text">
+              <strong>Avatim — Ivete</strong>
+              <em></em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--wide" data-id="centauro-copa" data-vimeo="1202701375" data-title="Centauro" data-sub="Copa">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">CENTAURO COPA</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">06</span>
+            <div class="project-text">
+              <strong>Centauro</strong>
+              <em>Copa</em>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── REAL TIME ── -->
+    <section class="category-section" id="section-realtime" data-cat="Real Time">
+      <div class="section-label">
+        <span class="section-tag">02 — Real Time</span>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project project--wide" data-id="ford-wec" data-vimeo="1103595061" data-title="WEC" data-sub="Ford — Real Time">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD WEC</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">06</span>
+            <div class="project-text">
+              <strong>WEC</strong>
+              <em>Ford — Real Time</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--tall" data-id="ford-darkhorse" data-vimeo="1202701389" data-title="Dark Horse" data-sub="Ford — Real Time">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD DARK HORSE</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">07</span>
+            <div class="project-text">
+              <strong>Dark Horse</strong>
+              <em>Ford — Real Time</em>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── CONTEÚDO ── -->
+    <section class="category-section" id="section-conteudo" data-cat="Conteúdo">
+      <div class="section-label">
+        <span class="section-tag">03 — Conteúdo</span>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project project--wide" data-id="avatim-snd" data-vimeo="1034055050" data-title="Avatim" data-sub="Sob Nova Direção">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">AVATIM — SOB NOVA DIREÇÃO</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">08</span>
+            <div class="project-text">
+              <strong>Avatim</strong>
+              <em>Sob Nova Direção</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--wide" data-id="ford-fernando-sorocaba" data-vimeo="1194520209" data-title="Ford" data-sub="Fernando & Sorocaba">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD — FERNANDO &amp; SOROCABA</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">09</span>
+            <div class="project-text">
+              <strong>Ford</strong>
+              <em>Fernando &amp; Sorocaba</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="avon-rebranding" data-vimeo="PLACEHOLDER_AVON" data-title="Avon" data-sub="Rebranding">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">AVON — REBRANDING</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">10</span>
+            <div class="project-text">
+              <strong>Avon</strong>
+              <em>Rebranding</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="ford-minhas-experiencias" data-vimeo="1202701583" data-title="Ford" data-sub="Minhas Experiências">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD — MINHAS EXPERIÊNCIAS</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">11</span>
+            <div class="project-text">
+              <strong>Ford</strong>
+              <em>Minhas Experiências</em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="xp-expert-trader" data-vimeo="1202701372" data-title="XP" data-sub="Expert Trader">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">XP — EXPERT TRADER</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">12</span>
+            <div class="project-text">
+              <strong>XP</strong>
+              <em>Expert Trader</em>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── INSTITUCIONAL ── -->
+    <section class="category-section" id="section-institucional" data-cat="Institucional">
+      <div class="section-label">
+        <span class="section-tag">04 — Institucional</span>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project" data-id="ford-employees" data-vimeo="1056047226" data-title="Ford Employees" data-sub="">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">FORD EMPLOYEES</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">10</span>
+            <div class="project-text">
+              <strong>Ford Employees</strong>
+              <em></em>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-id="centauro-pais" data-vimeo="1104136580" data-title="Centauro" data-sub="Dia dos Pais">
+          <div class="project-thumb">
+            <div class="thumb-inner">
+              <div class="thumb-placeholder">CENTAURO</div>
+            </div>
+            <div class="thumb-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="project-idx">11</span>
+            <div class="project-text">
+              <strong>Centauro</strong>
+              <em>Dia dos Pais</em>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+      <div class="footer-top">
+        <p class="footer-headline">Vamos tomar<br>um café?</p>
+        <div class="footer-contacts">
+          <a href="mailto:hello@lfilms.com.br" class="footer-contact-link">hello@lfilms.com.br</a>
+          <a href="https://www.instagram.com/labof_films/" target="_blank" rel="noopener" class="footer-contact-link">↗ @labof_films</a>
+        </div>
+      </div>
+      <div class="footer-body">
+        <p>Somos a Labof Films, uma produtora com base em São Paulo, atuando entre criação, produção e execução de projetos audiovisuais para marcas de diferentes universos.</p>
+        <p>Trabalhamos com excelência criativa, agilidade operacional e uma visão estratégica que conecta ideias, pessoas e formatos. Temos experiência em produções complexas, coberturas em real time e entregas rápidas — sem abrir mão da qualidade, do cuidado estético e da consistência narrativa.</p>
+        <p>No fim das contas, acreditamos em bons projetos feitos com boas pessoas.</p>
+      </div>
+      <div class="footer-bottom">
+        <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" class="footer-logo" />
+        <div class="footer-meta">
+          <span>São Paulo, Brasil</span>
+          <span>© 2025 Labof Films</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       SOBRE overlay
+  ════════════════════════════════════════════════ -->
+  <div class="sobre-overlay" id="sobreOverlay">
+    <button class="sobre-close" id="sobreClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </button>
+    <div class="sobre-content">
+      <div class="sobre-col sobre-col--logo">
+        <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" />
+      </div>
+      <div class="sobre-col sobre-col--text">
+        <p>Acreditamos no audiovisual como um território de experimentação. Um espaço onde ideias ganham forma, linguagem e impacto. Um lugar onde criação, técnica e estratégia se encontram para transformar conceitos em narrativas relevantes, bem executadas e vivas no tempo em que acontecem.</p>
+        <p>Trabalhamos com uma abordagem aberta e colaborativa de produção. Olhamos além do óbvio, conectando talentos, equipes e soluções que fazem sentido para cada desafio, seja ele criativo, técnico ou operacional.</p>
+        <p>Valorizamos quem se arrisca, quem testa novos caminhos, quem entende que inovação também está na forma de produzir. Especialmente em projetos que exigem precisão, velocidade e entregas em tempo real — como no universo automotivo, onde acumulamos sólida experiência.</p>
+        <p>Não por discurso, mas porque isso eleva o trabalho. E porque o impacto de um bom filme vai além da tela — ele reverbera na marca, no público e no mundo ao redor.</p>
+        <div class="sobre-links">
+          <a href="https://www.instagram.com/labof_films/" target="_blank" rel="noopener">↗ Instagram</a>
+          <a href="mailto:hello@lfilms.com.br">hello@lfilms.com.br</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       VIDEO MODAL
+  ════════════════════════════════════════════════ -->
+  <div class="modal" id="modal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <button class="modal-close" id="modalClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2L14 14M14 2L2 14" stroke="white" stroke-width="1"/>
+      </svg>
+    </button>
+    <div class="modal-body">
+      <div class="modal-player" id="modalPlayer"></div>
+      <p class="modal-label" id="modalLabel"></p>
+    </div>
+  </div>
+
+  <script src="js/common.js?v=3"></script>
+  <script src="js/main.js?v=11"></script>
+</body>
+</html>

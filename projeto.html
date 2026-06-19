@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labof Films</title>
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/project.css?v=9" />
+</head>
+<body class="project-page">
+
+  <!-- Fundo desfocado fixo -->
+  <div class="blur-bg" id="blurBg">
+    <div class="blur-bg-img" id="blurBgA"></div>
+  </div>
+
+  <!-- Custom cursor (anel + ponto) -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav show" id="nav">
+    <a href="index.html" class="nav-logo" id="navLogo">
+      <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html#section-publicidade" class="nav-link">Publicidade</a>
+      <a href="index.html#section-realtime" class="nav-link">Real Time</a>
+      <a href="index.html#section-conteudo" class="nav-link">Conteúdo</a>
+      <a href="index.html#section-institucional" class="nav-link">Institucional</a>
+    </div>
+    <button class="nav-sobre" id="navSobre">Sobre</button>
+  </nav>
+
+  <!-- CONTEÚDO DO PROJETO (montado por project.js) -->
+  <main class="project-root" id="projectRoot"></main>
+
+  <!-- ═══════════ SOBRE overlay ═══════════ -->
+  <div class="sobre-overlay" id="sobreOverlay">
+    <button class="sobre-close" id="sobreClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </button>
+    <div class="sobre-content">
+      <div class="sobre-col sobre-col--logo">
+        <img src="assets/logo/labof-logo-white.svg" alt="Labof Films" />
+      </div>
+      <div class="sobre-col sobre-col--text">
+        <p>Acreditamos no audiovisual como um território de experimentação. Um espaço onde ideias ganham forma, linguagem e impacto. Um lugar onde criação, técnica e estratégia se encontram para transformar conceitos em narrativas relevantes, bem executadas e vivas no tempo em que acontecem.</p>
+        <p>Trabalhamos com uma abordagem aberta e colaborativa de produção. Olhamos além do óbvio, conectando talentos, equipes e soluções que fazem sentido para cada desafio, seja ele criativo, técnico ou operacional.</p>
+        <div class="sobre-links">
+          <a href="https://www.instagram.com/labof_films/" target="_blank" rel="noopener">↗ Instagram</a>
+          <a href="mailto:hello@lfilms.com.br">hello@lfilms.com.br</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ VIDEO MODAL ═══════════ -->
+  <div class="modal" id="modal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <button class="modal-close" id="modalClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2L14 14M14 2L2 14" stroke="white" stroke-width="1"/>
+      </svg>
+    </button>
+    <div class="modal-body">
+      <div class="modal-player" id="modalPlayer"></div>
+      <p class="modal-label" id="modalLabel"></p>
+    </div>
+  </div>
+
+  <!-- ═══════════ LIGHTBOX (fotos) ═══════════ -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <button class="modal-close" id="lightboxClose">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2 2L14 14M14 2L2 14" stroke="white" stroke-width="1"/>
+      </svg>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" alt="" />
+  </div>
+
+  <script src="js/projects-data.js?v=12"></script>
+  <script src="js/common.js?v=3"></script>
+  <script src="js/project.js?v=9"></script>
+</body>
+</html>

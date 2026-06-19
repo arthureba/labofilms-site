@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editores
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Config de dev local (servidor) — não vai pro site publicado
+.claude/
+
+# Assets não usados (animação antiga, transição abandonada)
+assets/animation/
+assets/images/TRANSITION.mp4
