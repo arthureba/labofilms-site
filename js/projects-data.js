@@ -68,38 +68,6 @@ window.PROJECTS = {
           { vimeo: '1168498394', title: 'Filme de Natal', sub: 'com Felipão' }
         ]
       },
-      {
-        type: 'cuts',
-        label: 'Cortes',
-        items: [
-          { vimeo: '', title: 'Corte 30"' },
-          { vimeo: '', title: 'Corte 15"' },
-          { vimeo: '', title: 'Corte 6"' },
-        ]
-      },
-      {
-        type: 'social',
-        label: 'Redes Sociais',
-        items: [
-          { vimeo: '', title: 'Reels 01' },
-          { vimeo: '', title: 'Reels 02' },
-          { vimeo: '', title: 'Reels 03' },
-          { vimeo: '', title: 'Reels 04' },
-          { vimeo: '', title: 'Reels 05' },
-        ]
-      },
-      {
-        type: 'photos',
-        label: 'Fotografia',
-        items: [
-          { src: 'assets/images/projects/centauro-natal/01.jpg', alt: 'Still 01' },
-          { src: 'assets/images/projects/centauro-natal/02.jpg', alt: 'Still 02' },
-          { src: 'assets/images/projects/centauro-natal/03.jpg', alt: 'Still 03' },
-          { src: 'assets/images/projects/centauro-natal/04.jpg', alt: 'Still 04' },
-          { src: 'assets/images/projects/centauro-natal/05.jpg', alt: 'Still 05' },
-          { src: 'assets/images/projects/centauro-natal/06.jpg', alt: 'Still 06' },
-        ]
-      },
     ],
     next: 'avatim-ivete'
   },
@@ -130,33 +98,6 @@ window.PROJECTS = {
         type: 'film',
         label: 'Filme Oficial',
         items: [ { vimeo: '549407968', title: 'Filme Havaianas' } ]
-      },
-      {
-        type: 'cuts',
-        label: 'Cortes',
-        items: [
-          { vimeo: '', title: 'Corte 30"' },
-          { vimeo: '', title: 'Corte 15"' },
-        ]
-      },
-      {
-        type: 'social',
-        label: 'Conteúdo Redes Sociais',
-        items: [
-          { vimeo: '', title: 'Reels 01' },
-          { vimeo: '', title: 'Reels 02' },
-          { vimeo: '', title: 'Reels 03' },
-        ]
-      },
-      {
-        type: 'photos',
-        label: 'Fotografia',
-        items: [
-          { src: 'assets/images/projects/havaianas/01.jpg', alt: 'Still 01' },
-          { src: 'assets/images/projects/havaianas/02.jpg', alt: 'Still 02' },
-          { src: 'assets/images/projects/havaianas/03.jpg', alt: 'Still 03' },
-          { src: 'assets/images/projects/havaianas/04.jpg', alt: 'Still 04' },
-        ]
       },
     ],
     next: 'outback'

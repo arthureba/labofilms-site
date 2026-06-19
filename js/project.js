@@ -65,6 +65,12 @@ function photoCard(item) {
 }
 
 function blockEl(block) {
+  // Só renderiza itens com conteúdo real (sem placeholder "Em breve")
+  let items = block.items || [];
+  if (block.type === 'photos') items = items.filter(it => it.src);
+  else                         items = items.filter(it => hasVid(it.vimeo));
+  if (!items.length) return null;   // bloco vazio → não aparece
+
   const sec = document.createElement('section');
   sec.className = `proj-block proj-block--${block.type}`;
   sec.innerHTML = `<h3 class="block-label">${esc(block.label)}</h3>`;
@@ -72,7 +78,7 @@ function blockEl(block) {
   const grid = document.createElement('div');
   grid.className = `block-grid block-grid--${block.type}`;
 
-  (block.items || []).forEach(item => {
+  items.forEach(item => {
     if (block.type === 'photos') {
       grid.appendChild(photoCard(item));
     } else if (block.type === 'film') {
@@ -152,8 +158,8 @@ function render() {
   intro.innerHTML = `<div class="proj-summary">${summaryHtml}</div>`;
   article.appendChild(intro);
 
-  // BLOCOS
-  (data.blocks || []).forEach(b => article.appendChild(blockEl(b)));
+  // BLOCOS (pula os vazios)
+  (data.blocks || []).forEach(b => { const el = blockEl(b); if (el) article.appendChild(el); });
 
   // PRÓXIMO PROJETO
   const next = data.next && window.PROJECTS[data.next];

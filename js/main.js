@@ -163,7 +163,8 @@ document.querySelectorAll('.project').forEach(card => {
   poster.className = 'thumb-poster';
   poster.loading = 'lazy';
   poster.alt = card.dataset.title || '';
-  poster.src = `https://vumbnail.com/${vid}.jpg`;
+  // usa um poster local se o card definir data-poster, senão pega o frame do Vimeo
+  poster.src = card.dataset.poster || `https://vumbnail.com/${vid}.jpg`;
   poster.addEventListener('load', () => card.classList.add('has-poster'));
   poster.addEventListener('error', () => poster.remove());  // offline → mantém placeholder
   thumb.insertBefore(poster, thumb.firstChild);
