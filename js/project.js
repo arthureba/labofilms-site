@@ -178,7 +178,8 @@ function render() {
   const footer = document.createElement('footer');
   footer.className = 'proj-footer';
   footer.innerHTML = `
-    <a href="mailto:hello@lfilms.com.br" class="footer-contact-link">hello@lfilms.com.br</a>
+    <a href="mailto:vitorfaria@labof.com.br" class="footer-contact-link">vitorfaria@labof.com.br</a>
+    <a href="mailto:giovanna@labof.com.br" class="footer-contact-link">giovanna@labof.com.br</a>
     <a href="https://www.instagram.com/labof_films/" target="_blank" rel="noopener" class="footer-contact-link">↗ @labof_films</a>
     <span>© 2025 Labof Films</span>`;
   article.appendChild(footer);

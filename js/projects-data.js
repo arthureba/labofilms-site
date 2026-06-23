@@ -293,9 +293,12 @@ window.PROJECTS = {
       ['Cliente',  'Avon'],
       ['Produção', 'Labof Films'],
     ],
-    hero: { vimeo: '' },   // ← aguardando link do Vimeo
+    hero: { vimeo: '1203864929' },
     blocks: [
-      { type:'film', label:'Filme', items:[{ vimeo:'', title:'Evento Avon' }] },
+      { type:'film', label:'Filme', items:[
+        { vimeo: '1203864929', title: 'Evento Avon' },
+        { vimeo: '1203864928', title: 'Evento Avon 02' },
+      ]},
     ],
     next: 'ford-minhas-experiencias'
   },

@@ -7,11 +7,49 @@
 const intro = document.getElementById('intro');
 const nav   = document.getElementById('nav');
 
+/* Logo desenhando: injeta o SVG inline e anima cada linha (cls-1)
+   se desenhando do centro pra fora; depois o fill (cls-2) surge. */
+fetch('assets/logo/labof-logo-white.svg')
+  .then(r => r.text())
+  .then(svgText => {
+    const holder = document.getElementById('introLogo');
+    holder.innerHTML = svgText;
+    const svg = holder.querySelector('svg');
+    if (!svg) return;
+
+    const vb = svg.viewBox.baseVal;
+    const cx = vb.width / 2, cy = vb.height / 2;
+    const lines = Array.from(svg.querySelectorAll('.cls-1'));
+
+    const items = lines.map(p => {
+      const len = p.getTotalLength() || 1;
+      let dist = 0;
+      try { const b = p.getBBox(); dist = Math.hypot((b.x + b.width/2) - cx, (b.y + b.height/2) - cy); } catch (e) {}
+      p.style.strokeDasharray  = len;
+      p.style.strokeDashoffset = len;
+      return { p, dist };
+    });
+    const maxDist = Math.max(1, ...items.map(i => i.dist));
+
+    items.forEach(({ p, dist }) => {
+      const delay = (dist / maxDist) * 750;           // centro → fora
+      p.style.transition = `stroke-dashoffset 1000ms cubic-bezier(.16,1,.3,1) ${delay}ms`;
+    });
+
+    // dispara o desenho no próximo frame
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      items.forEach(({ p }) => { p.style.strokeDashoffset = '0'; });
+    }));
+    // depois das linhas, o preenchimento surge
+    setTimeout(() => svg.classList.add('fill-in'), 1550);
+  })
+  .catch(() => {});
+
 setTimeout(() => {
   intro.classList.add('out');
   nav.classList.add('show');
   document.querySelector('.hero-ui').classList.add('show');
-}, 2400);
+}, 3600);
 
 /* ─── Blur background (vidro fosco) ──────────────
    Troca o fundo borrado conforme o projeto em foco
